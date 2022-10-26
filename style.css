@@ -1,0 +1,111 @@
+
+:root {
+    --block-size: 50px;
+    --padding: 25px;
+    --bg-color: #00000044;
+    --bg-brick-color: #00000000;
+    --bg-color-circuit-1:#00110099;
+    --bg-color-circuit-2:#00004466;
+    --bg-color-circuit-3:#000022AA;
+} 
+body {
+    background-color: black;
+    overflow:hidden;
+}
+#gameUI {
+    display: grid;
+    place-items: center;
+}
+.finished {
+    filter: grayscale(100%);
+}
+.thumbnail {
+    transition-property: scale, filter;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    scale:1;
+    zoom: 0.2;
+    filter: grayscale(1.0) contrast(0.5);
+}
+.thumbnail:hover {
+    scale: 1.5;
+    z-index: 100;
+    filter: grayscale(0) contrast(1.0);
+    position: relative;
+}
+.Container1 {
+    border-radius: 25px;
+    background-image: url("images/Printed\ Circuit\ Board1.svg");
+    background-size: 50%;
+    padding: var(--padding);
+}
+.Container2 {
+    border-radius: 25px;
+    background-image: url("images/Printed\ Circuit\ Board2.svg");
+    background-size: 60%;
+    padding: var(--padding);
+}
+.Container3 {
+    border-radius: 25px;
+    background-image: url("images/Printed\ Circuit\ Board3.svg");
+    background-size: 45%;
+    padding: var(--padding);
+    background-position: 10px 100px;
+}
+.T0 {
+    background-color:var(--bg-brick-color);
+}
+.T1 {
+    background-image: url("images/recycle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--bg-brick-color);
+    background-blend-mode:difference;
+}
+.T2 {
+    background-image: url("images/bug.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:var(--bg-brick-color);
+}
+.T3 {
+    background-image: url("images/recycle.png"), url("images/bug.png");
+    background-repeat: no-repeat no-repeat;
+    background-position: center;
+    background-color:var(--bg-brick-color);
+    background-blend-mode:luminosity;
+}
+.T4 {
+    background-image: url("images/android.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--bg-brick-color);
+}
+.T5 {
+    background-image: url("images/android.png");
+    background-repeat: no-repeat no-repeat;
+    background-position: center;
+    background-color:var(--bg-brick-color);
+ }
+.T8 {
+    background-image: url("images/processor.png");
+    background-repeat: no-repeat;
+    background-size: var(--block-size);
+    background-position: center;
+    background-color: var(--bg-brick-color);
+    
+}
+.T9 {
+    background-image: url("images/bios.png");
+    background-repeat: no-repeat;
+    background-size: var(--block-size);
+    background-position: center;
+    background-color: var(--bg-brick-color);
+}
+.TC {
+    background-image: url("images/card_chip_gold.png");
+    background-repeat: no-repeat;
+    background-size: var(--block-size);
+    background-position: center;
+    background-color: var(--bg-brick-color);
+}
